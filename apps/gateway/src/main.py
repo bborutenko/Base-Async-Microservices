@@ -17,7 +17,7 @@ from fastapi import FastAPI
 from config.settings import settings as st
 from orders.router import router as o_router
 from shared.logging import get_logger, setup_logging
-from src.shared.routers import router as h_router
+from shared.routers import router as h_router
 
 
 async def check_kafka_connectivity() -> None:

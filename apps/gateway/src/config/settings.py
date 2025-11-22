@@ -14,6 +14,7 @@ class Settings(BaseSettings):
       - HOST=0.0.0.0
       - PORT=8000
       - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+      - KAFKA_ANALYTICS_OUTPUT_TOPIC=analytics
 
     The `.env` and `.env.local` files (if present) will also be loaded.
     """
@@ -30,6 +31,7 @@ class Settings(BaseSettings):
     host: str = Field(default="0.0.0.0")
     port: int = Field(default=8000)
     kafka_bootstrap_servers: str = Field(...)
+    kafka_analytics_output_topic: str = Field(default="analytics")
 
 
 settings = Settings()

@@ -24,7 +24,7 @@ async def create_order(
     producer: AIOKafkaProducer = Depends(get_producer),
     correlation_id: UUID = Depends(get_correlation_id),
 ) -> sch.DisplayOrder:
-    created_order = await OrdersService.create_order(producer, order)
+    created_order = await OrdersService.create_order(producer, order, correlation_id)
     await AnalyticsService.create_order(
         producer, correlation_id, created_order, request
     )

@@ -7,6 +7,7 @@ from uuid import UUID
 from aiokafka import AIOKafkaProducer
 from fastapi import Request, status
 
+from config.settings import settings as st
 from orders.schemas import DisplayOrder
 
 from .logging import get_logger
@@ -60,7 +61,7 @@ class AnalyticsService:
         cls, producer: AIOKafkaProducer, message: AnalyticMessage
     ) -> None:
         logger.info("Sending analytics message into queue", message.to_dict())
-        await producer.send_and_wait("analytics", message.to_dict())
+        await producer.send_and_wait(st.kafka_analytics_output_topic, message.to_dict())
 
     @classmethod
     async def create_order(
