@@ -1,0 +1,14 @@
+[package]
+name = "orders"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+actix-web = "4"
+rdkafka = "0.38.0"
+dotenvy = "0.15.7"
+tokio = { version = "1.48.0", features = ["full"] }
+tokio-macros = { version = "0.2.0-alpha.6" }
+uuid = { version = "1.18.0", features = ["v4"] }
+tracing = { version = "0.1.41", features = ["log"] }
+tracing-subscriber = { version = "0.3.20", features = ["env-filter"] }

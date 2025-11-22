@@ -1,0 +1,137 @@
+# Target directories
+target/
+**/target/
+
+# Debug builds
+debug/
+**/debug/
+
+# Release builds (optional - include if you build inside container)
+release/
+**/release/
+
+# Cargo cache and files
+Cargo.lock
+# Cargo.lock  # раскомментируйте если используете --locked в Dockerfile
+
+# Rust build artifacts
+*.rs.bk
+*.d
+*.pdb
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+.gitmodules
+
+# Docker files
+Dockerfile
+.dockerignore
+
+# Documentation
+docs/
+**/docs/
+
+# Tests (optional)
+tests/
+**/tests/
+benches/
+**/benches/
+examples/
+**/examples/
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env
+.env.*
+
+# Temporary files
+tmp/
+temp/# Target directories
+target/
+**/target/
+
+# Debug builds
+debug/
+**/debug/
+
+# Release builds (optional - include if you build inside container)
+release/
+**/release/
+
+# Cargo cache and files
+Cargo.lock
+# Cargo.lock  # раскомментируйте если используете --locked в Dockerfile
+
+# Rust build artifacts
+*.rs.bk
+*.d
+*.pdb
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+.gitmodules
+
+# Docker files
+Dockerfile
+.dockerignore
+
+# Documentation
+docs/
+**/docs/
+
+# Tests (optional)
+tests/
+**/tests/
+benches/
+**/benches/
+examples/
+**/examples/
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env
+.env.*
+
+# Temporary files
+tmp/
+temp/
