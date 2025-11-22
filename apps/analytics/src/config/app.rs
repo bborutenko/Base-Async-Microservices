@@ -7,7 +7,7 @@ use rdkafka::consumer::stream_consumer::StreamConsumer;
 use tokio::time::Instant;
 use tracing::{Instrument, error, info, info_span, warn};
 
-use crate::analytics::handler::process_message;
+use crate::handler::process_message;
 
 pub struct App {
     consumer: StreamConsumer,

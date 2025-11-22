@@ -1,5 +1,5 @@
-pub mod analytics;
 pub mod config;
+pub mod handler;
 
 use tokio;
 

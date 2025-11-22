@@ -5,6 +5,7 @@ pub fn setup_logging() {
         .with_level(true)
         .with_target(false)
         .with_thread_ids(false)
+        .with_span_events(fmt::format::FmtSpan::NEW | fmt::format::FmtSpan::CLOSE)
         .compact();
 
     let filter_layer = EnvFilter::try_from_default_env().unwrap_or_else(|_| EnvFilter::new("info"));
