@@ -18,5 +18,5 @@ async fn main() {
         settings.kafka_group_id(),
         settings.kafka_input_topic(),
     );
-    app.run().await;
+    app.run(settings.kafka_connection_attempts()).await;
 }
