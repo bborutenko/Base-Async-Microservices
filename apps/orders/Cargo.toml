@@ -12,3 +12,4 @@ tokio-macros = { version = "0.2.0-alpha.6" }
 uuid = { version = "1.18.0", features = ["v4"] }
 tracing = { version = "0.1.41", features = ["log"] }
 tracing-subscriber = { version = "0.3.20", features = ["env-filter"] }
+futures = "0.3.31"
