@@ -17,8 +17,9 @@ class OrdersService:
     ) -> DisplayOrder:
         logger.info("Sending create order to queue", order.__dict__)
         created_order = DisplayOrder(
-            id="ord_0001",
+            id=correlation_id,
             product_id=order.product_id,
+            user_email=order.user_email,
             quantity=order.quantity,
             price=order.price,
             currency=order.currency,

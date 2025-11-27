@@ -1,10 +1,12 @@
 from datetime import datetime
+from uuid import UUID
 
 from pydantic import BaseModel
 
 
 class CreateOrder(BaseModel):
     product_id: str
+    user_email: str
     quantity: int
     price: float
     currency: str
@@ -12,8 +14,9 @@ class CreateOrder(BaseModel):
 
 
 class DisplayOrder(BaseModel):
-    id: str
+    id: UUID
     product_id: str
+    user_email: str
     quantity: int
     price: float
     currency: str
